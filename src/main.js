@@ -2,16 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 // import Vuex from 'vuex'
-import stroe from "./store/store";
 import ElementUI from 'element-ui'
 import App from './App'
 import jquery from 'jquery'
+import store from "./store"
 import "./icon/index";
 import 'element-ui/lib/theme-chalk/index.css'
 import router from './router'
 Vue.use(ElementUI)
-// Vue.use(Vuex)
-Vue.prototype.$store = stroe;
+
+
 
 Vue.config.productionTip = false
 
@@ -19,9 +19,12 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  // stroe,
+  store,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 })
 
-// import "./styles/bease.css";
+
+
