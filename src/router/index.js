@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Layout from '@/view/Layout/layout';
 import tabs from '@/view/tabs/tabs';
 import login from '@/view/login/login'; //登录
+import editor from '@/view/editor/editor';//富文本
 Vue.use(Router)
 
 
@@ -28,6 +29,16 @@ const router = new Router({
         meta: {
           requireAuth: true
         },
+      }]
+    },{
+      path:"/",
+      component:Layout,
+      children:[{
+        path:'editor',
+        component:editor,
+        meta:{
+          requireAuth:true
+        }
       }]
     }
   ]

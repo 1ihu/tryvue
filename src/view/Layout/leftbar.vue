@@ -12,6 +12,10 @@
      <icon-svg  :iconClss="'wodedingdan'"></icon-svg>
     <span slot="title">Tab</span>
   </el-menu-item>
+  <el-menu-item index="/editor">
+     <icon-svg  :iconClss="'wodedingdan'"></icon-svg>
+    <span slot="title">editor</span>
+  </el-menu-item>
 
 
 
@@ -54,9 +58,13 @@
     height: 100%;
   }
 .el-menu-item{
+   padding-left: 30px !important;
     max-width: 200px;
+    text-align: left;
 }
-
+.el-menu-item span{
+  padding-left: 12px;
+}
 .leftbar{
     position: relative;
     width: auto;
